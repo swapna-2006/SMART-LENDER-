@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Approval Prediction</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/input.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="heading">
+        <h2>Enter your Details for Loan Approval Prediction</h2>
+    </div>
+
+    <form action="/submit" method="POST">
+
+        <!-- Gender -->
+        <label>Gender</label>
+        <select name="Gender" required>
+            <option value="">Select Gender</option>
+            <option value="0">Male</option>
+            <option value="1">Female</option>
+        </select>
+
+        <!-- Married -->
+        <label>Married</label>
+        <select name="Married" required>
+            <option value="">Select</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+
+        <!-- Dependents -->
+        <label>Dependents</label>
+        <select name="Dependents" required>
+            <option value="">Select</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3+</option>
+        </select>
+
+        <!-- Education -->
+        <label>Education</label>
+        <select name="Education" required>
+            <option value="">Select</option>
+            <option value="1">Graduate</option>
+            <option value="0">Not Graduate</option>
+        </select>
+
+        <!-- Self Employed -->
+        <label>Self Employed</label>
+        <select name="Self_Employed" required>
+            <option value="">Select</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+
+        <!-- Applicant Income -->
+        <label>Applicant Income</label>
+        <input type="number"
+               name="ApplicantIncome"
+               placeholder="Enter Applicant Income"
+               required>
+
+        <!-- Co Applicant Income -->
+        <label>Co Applicant Income</label>
+        <input type="number"
+               name="CoapplicantIncome"
+               placeholder="Enter Co Applicant Income"
+               required>
+
+        <!-- Loan Amount -->
+        <label>Loan Amount</label>
+        <input type="number"
+               name="LoanAmount"
+               placeholder="Enter Loan Amount"
+               required>
+
+        <!-- Loan Amount Term -->
+        <label>Loan Amount Term</label>
+        <input type="number"
+               name="Loan_Amount_Term"
+               placeholder="Enter Loan Amount Term"
+               required>
+
+        <!-- Credit History -->
+        <label>Credit History</label>
+        <select name="Credit_History" required>
+            <option value="">Select</option>
+            <option value="1">Good (1)</option>
+            <option value="0">Bad (0)</option>
+        </select>
+
+        <!-- Property Area -->
+        <label>Property Area</label>
+        <select name="Property_Area" required>
+            <option value="">Select</option>
+            <option value="0">Rural</option>
+            <option value="1">Semi Urban</option>
+            <option value="2">Urban</option>
+        </select>
+
+        <br><br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+</div>
+
+</body>
+</html>
